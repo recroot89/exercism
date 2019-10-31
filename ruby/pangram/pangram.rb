@@ -5,14 +5,13 @@
 #
 # To get started with TDD, see the `README.md` file in your
 # `ruby/pangram` directory.
-require 'set'
 
 class Pangram
   def self.pangram?(sentence)
     letter_count = sentence.downcase
                            .gsub(/[^a-z]/i, '')
                            .split('')
-                           .to_set
+                           .uniq
                            .count
     letter_count == 26
   end
