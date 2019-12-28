@@ -1,0 +1,61 @@
+Arguments: 
+  /home/recroot/.asdf/installs/nodejs/11.15.0/bin/node /usr/bin/yarn
+
+PATH: 
+  /home/recroot/.asdf/installs/nodejs/11.15.0/bin:/home/recroot/.asdf/installs/nodejs/11.15.0/.npm/bin:/home/recroot/.asdf/shims:/home/recroot/.asdf/bin:/home/recroot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/recroot/.fzf/bin
+
+Yarn version: 
+  1.21.0
+
+Node version: 
+  11.15.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect ECONNREFUSED 104.16.19.35:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1088:14)
+
+npm manifest: 
+  {
+    "name": "exercism-javascript",
+    "description": "Exercism exercises in Javascript.",
+    "author": "Katrina Owen",
+    "private": true,
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/exercism/javascript"
+    },
+    "devDependencies": {
+      "@babel/cli": "^7.5.5",
+      "@babel/core": "^7.5.5",
+      "@babel/preset-env": "^7.5.5",
+      "@types/jest": "^24.0.16",
+      "@types/node": "^12.6.8",
+      "babel-eslint": "^10.0.2",
+      "babel-jest": "^24.8.0",
+      "eslint": "^6.1.0",
+      "eslint-plugin-import": "^2.18.2",
+      "jest": "^24.8.0"
+    },
+    "jest": {
+      "modulePathIgnorePatterns": [
+        "package.json"
+      ]
+    },
+    "scripts": {
+      "test": "jest --no-cache ./*",
+      "watch": "jest --no-cache --watch ./*",
+      "lint": "eslint .",
+      "lint-test": "eslint . && jest --no-cache ./* "
+    },
+    "license": "MIT",
+    "dependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
