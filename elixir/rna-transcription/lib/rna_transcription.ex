@@ -10,14 +10,14 @@ defmodule RnaTranscription do
   @spec to_rna([char]) :: [char]
   def to_rna(dna) do
     dna_to_rna_table = %{
-      'G' => 'C',
-      'C' => 'G',
-      'T' => 'A',
-      'A' => 'U'
+      ?G => ?C,
+      ?C => ?G,
+      ?T => ?A,
+      ?A => ?U
     }
 
-    Enum.reduce(dna, [], fn code, acc ->
-      acc ++ Map.get(dna_to_rna_table, [code])
+    Enum.map(dna, fn code ->
+      Map.get(dna_to_rna_table, code)
     end)
   end
 end
