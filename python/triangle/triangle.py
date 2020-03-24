@@ -1,27 +1,21 @@
-def equilateral(sides):
-    if __is_wrong(sides):
-        return False
+def valid(fn):
+    def wrapper(sides):
+        a, b, c = sides
+        valid_triangle = not (a == 0 or b == 0 or c == 0 or (a + b < c) or (a + c < b) or (b + c < a))
+        return valid_triangle and fn(sides)
+    return wrapper
 
+@valid
+def equilateral(sides):
     a, b, c = sides
     return a == b and b == c
 
-
+@valid
 def isosceles(sides):
-    if __is_wrong(sides):
-        return False
-
     a, b, c = sides
     return a == b or b == c or c == a
 
+@valid
 def scalene(sides):
-    if __is_wrong(sides):
-        return False
-
     a, b, c = sides
     return a != b and a != c and b != c
-
-
-def __is_wrong(sides):
-    a, b, c = sides
-    if a == 0 or b == 0 or c == 0 or (a + b < c) or (a + c < b) or (b + c < a):
-        return True
