@@ -1,11 +1,5 @@
 # frozen_string_literal: true
 
-# Write your code for the 'Anagram' exercise in this file. Make the tests in
-# `anagram_test.rb` pass.
-#
-# To get started with TDD, see the `README.md` file in your
-# `ruby/anagram` directory.
-
 class Anagram
   attr_reader :sorted_word, :origin_word
 

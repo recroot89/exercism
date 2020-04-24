@@ -1,11 +1,5 @@
 # frozen_string_literal: true
 
-# Write your code for the 'Saddle Points' exercise in this file. Make the tests in
-# `saddle_points_test.rb` pass.
-#
-# To get started with TDD, see the `README.md` file in your
-# `ruby/saddle-points` directory.
-
 class Matrix
   attr_reader :matrix
 

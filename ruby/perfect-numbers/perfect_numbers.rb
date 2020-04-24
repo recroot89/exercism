@@ -1,11 +1,5 @@
 # frozen_string_literal: true
 
-# Write your code for the 'Perfect Numbers' exercise in this file. Make the tests in
-# `perfect_numbers_test.rb` pass.
-#
-# To get started with TDD, see the `README.md` file in your
-# `ruby/perfect-numbers` directory.
-
 class PerfectNumber
   def self.classify(number)
     raise RuntimeError if number.negative?
