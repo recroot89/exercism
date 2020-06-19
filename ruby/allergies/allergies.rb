@@ -16,9 +16,8 @@ class Allergies
   private
 
   def allergy_list(score)
-    allergy_score = (score % 256).zero? ? score : score % 256
     reverse_indexes = (0..ITEMS.size - 1).to_a.reverse
-    reverse_indexes.each_with_object(list: [], score: allergy_score) do |i, acc|
+    reverse_indexes.each_with_object(list: [], score: score % 256) do |i, acc|
       if acc[:score] >= 2**i
         acc[:list] << ITEMS[i]
         acc[:score] -= 2**i
