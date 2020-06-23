@@ -1,4 +1,5 @@
 javascript/*/node_modules
 javascript/*/yarn.lock
+javascript/*/package-lock.json
 python/*/__pycache__
 python/*/.pytest_cache
