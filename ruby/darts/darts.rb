@@ -1,19 +1,17 @@
 # frozen_string_literal: true
 
 class Darts
-
   def initialize(x, y)
-    @x = x
-    @y = y
+    @radius = Math.sqrt(x**2 + y**2)
   end
 
   def score
-    radius = Math.sqrt(@x**2 + @y**2)
-    if radius <= 1
+    case @radius
+    when 0..1
       10
-    elsif radius > 1 && radius <= 5
+    when 1..5
       5
-    elsif radius > 5 && radius <= 10
+    when 5..10
       1
     else
       0
